@@ -99,22 +99,9 @@ img {
 
 .typewriter span {
   display: inline-block;
-  max-width: 0;
-  overflow: hidden;
-  white-space: nowrap;
+  min-height: 1.2em;
   border-right: 2px solid rgba(183, 208, 189, 0.9);
-  animation:
-    typing 2.35s steps(34, end) 420ms forwards,
-    caret 820ms step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    max-width: 0;
-  }
-  to {
-    max-width: 34ch;
-  }
+  animation: caret 820ms step-end infinite;
 }
 
 @keyframes caret {
@@ -149,10 +136,7 @@ img {
   }
 
   .typewriter span {
-    max-width: none;
     white-space: normal;
-    border-right: 0;
-    animation: none;
   }
 
   .section-glow {
@@ -179,7 +163,6 @@ img {
   }
 
   .typewriter span {
-    max-width: none;
     border-right: 0;
     animation: none;
   }

@@ -1,27 +1,31 @@
 import { useState } from 'react';
 import { BarChart3, KanbanSquare, Smartphone, UserRound } from 'lucide-react';
+import customerProfile from '../assets/customer-profile.png';
+import dashboardDesktop from '../assets/dashboard-desktop.png';
+import dealsPipeline from '../assets/deals-pipeline.png';
+import mobileDashboard from '../assets/mobile-dashboard.png';
 
 const screenshots = [
   {
-    src: '/src/assets/dashboard-desktop.png',
+    src: dashboardDesktop,
     caption: 'Analytics dashboard',
     alt: 'SalesFlow CRM analytics dashboard screenshot',
     icon: BarChart3
   },
   {
-    src: '/src/assets/mobile-dashboard.png',
+    src: mobileDashboard,
     caption: 'Mobile CRM experience',
     alt: 'SalesFlow CRM mobile dashboard screenshot',
     icon: Smartphone
   },
   {
-    src: '/src/assets/deals-pipeline.png',
+    src: dealsPipeline,
     caption: 'Deal pipeline board',
     alt: 'SalesFlow CRM deal pipeline board screenshot',
     icon: KanbanSquare
   },
   {
-    src: '/src/assets/customer-profile.png',
+    src: customerProfile,
     caption: 'Customer profile timeline',
     alt: 'SalesFlow CRM customer profile activity timeline screenshot',
     icon: UserRound

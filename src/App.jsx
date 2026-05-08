@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { ArrowRight, Database, Github, Mail, ShieldCheck, Sparkles, Workflow } from 'lucide-react';
 import ContactSection from './components/ContactSection.jsx';
 import Hero3D from './components/Hero3D.jsx';
@@ -50,7 +51,29 @@ const heroProofs = [
   ['PostgreSQL', Database]
 ];
 
+const heroTitle = 'Intern Software Engineer Candidate';
+
 export default function App() {
+  const [typedTitle, setTypedTitle] = useState('');
+
+  useEffect(() => {
+    const startDelay = window.setTimeout(() => {
+      let index = 0;
+      const interval = window.setInterval(() => {
+        index += 1;
+        setTypedTitle(heroTitle.slice(0, index));
+
+        if (index >= heroTitle.length) {
+          window.clearInterval(interval);
+        }
+      }, 58);
+    }, 420);
+
+    return () => {
+      window.clearTimeout(startDelay);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#030712] text-paper">
       <Navbar />
@@ -72,8 +95,11 @@ export default function App() {
               <h1 className="font-display text-[3.35rem] font-semibold leading-[0.98] tracking-[-0.02em] text-paper min-[380px]:text-6xl sm:text-7xl lg:text-[5.35rem]">
                 Lu Phi Hung
               </h1>
-              <p className="typewriter mt-5 font-display text-[1.35rem] font-medium leading-snug text-paper/88 sm:mt-6 sm:text-[1.75rem]">
-                <span>Intern Software Engineer Candidate</span>
+              <p
+                className="typewriter mt-5 font-display text-[1.35rem] font-medium leading-snug text-paper/88 sm:mt-6 sm:text-[1.75rem]"
+                aria-label={heroTitle}
+              >
+                <span>{typedTitle}</span>
               </p>
               <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
                 I build practical full-stack CRM systems with Java Spring Boot, React, PostgreSQL, and Salesforce-inspired
