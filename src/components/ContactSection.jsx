@@ -15,8 +15,8 @@ const contacts = [
   },
   {
     label: 'LinkedIn',
-    value: 'add later',
-    href: '#contact',
+    value: 'linkedin.com/in/luphihung',
+    href: 'https://www.linkedin.com/in/luphihung/',
     icon: Linkedin
   },
   {

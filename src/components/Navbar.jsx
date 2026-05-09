@@ -26,7 +26,7 @@ export default function Navbar() {
         </div>
         <div className="flex shrink-0 items-center">
           <a className="resume-link inline-flex" href="/resume.pdf">
-            View CV
+            Resume
           </a>
         </div>
       </nav>
